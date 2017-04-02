@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataTemplate x:Key="NamedColorDataTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border
+                Grid.Column="0"
+                Background="{Binding Color,
+                Converter={StaticResource ColorToSolidColorBrush}}"/>
+            <Button
+                Grid.Column="1"
+                Style="{DynamicResource ButtonStyle}"
+                Content="{Binding Name,
+                Converter={StaticResource SpacesBeforeCapitalLetters}}"
+                Padding="16"
+                HorizontalContentAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

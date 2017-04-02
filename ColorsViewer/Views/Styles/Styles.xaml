@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="FocusVisualStyle.xaml"/>
+        <ResourceDictionary Source="ButtonStyle.xaml"/>
+        <ResourceDictionary Source="NavigationWindowStyle.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

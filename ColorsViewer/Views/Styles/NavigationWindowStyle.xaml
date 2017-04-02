@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type NavigationWindow}" x:Key="NavigationWindowStyle" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type NavigationWindow}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <AdornerDecorator Grid.Row="0">
+                            <ContentPresenter ClipToBounds="False"/>
+                        </AdornerDecorator>
+
+                        <Button
+                            Grid.Row="1"
+                            Style="{DynamicResource ButtonStyle}"
+                            Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}"
+                            Command="NavigationCommands.BrowseBack"
+                            Content="Back"
+                            IsTabStop="True"
+                            Padding="16"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
