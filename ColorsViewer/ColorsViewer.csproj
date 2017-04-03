@@ -57,7 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\ColorViewModel.cs" />
+    <Compile Include="ViewModels\NamedColor.cs" />
     <Compile Include="Views\Controls\NavigateButton.cs" />
     <Compile Include="Views\Converters\ColorToSolidColorBrushConverter.cs" />
     <Compile Include="Views\Converters\SpacesBeforeCapitalLettersConverter.cs" />

@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ControlTemplate x:Key="ButtonTemplate" TargetType="{x:Type Button}">
+        
         <Border
             x:Name="border"
             BorderThickness="0"
@@ -20,6 +21,7 @@
                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                 VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
         </Border>
+        
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter TargetName="border" Property="Background"
@@ -33,6 +35,6 @@
                 <Setter TargetName="contentPresenter" Property="TextElement.Foreground"
                         Value="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" />
             </Trigger>
-        </ControlTemplate.Triggers>
-    </ControlTemplate>
+        </ControlTemplate.Triggers>        
+    </ControlTemplate>    
 </ResourceDictionary>

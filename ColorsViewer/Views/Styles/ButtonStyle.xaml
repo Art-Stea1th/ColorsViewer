@@ -6,4 +6,5 @@
         <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlLightLightBrushKey}}"/>
         <Setter Property="FocusVisualStyle" Value="{DynamicResource FocusVisualStyle}"/>
     </Style>
+    
 </ResourceDictionary>
