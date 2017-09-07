@@ -1,34 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsViewer.Views", "ColorsViewer.Views\ColorsViewer.Views.csproj", "{16B54588-5042-40E1-87B6-7B34785381C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsViewer", "ColorsViewer\ColorsViewer.csproj", "{480A7C21-EF5E-45A8-A7A5-FDDF292FBF60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsViewer.ViewModels", "ColorsViewer.ViewModels\ColorsViewer.ViewModels.csproj", "{29503A68-F3E3-4507-AB40-ED7F24C44EC6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorsViewer.Models", "ColorsViewer.Models\ColorsViewer.Models.csproj", "{50158D83-87F8-41CF-B645-226DDCFD7E44}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1AD1EEA-BD66-4F32-B25A-996FC11D90E2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{16B54588-5042-40E1-87B6-7B34785381C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16B54588-5042-40E1-87B6-7B34785381C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16B54588-5042-40E1-87B6-7B34785381C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16B54588-5042-40E1-87B6-7B34785381C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{29503A68-F3E3-4507-AB40-ED7F24C44EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29503A68-F3E3-4507-AB40-ED7F24C44EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29503A68-F3E3-4507-AB40-ED7F24C44EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29503A68-F3E3-4507-AB40-ED7F24C44EC6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50158D83-87F8-41CF-B645-226DDCFD7E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50158D83-87F8-41CF-B645-226DDCFD7E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50158D83-87F8-41CF-B645-226DDCFD7E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50158D83-87F8-41CF-B645-226DDCFD7E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480A7C21-EF5E-45A8-A7A5-FDDF292FBF60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480A7C21-EF5E-45A8-A7A5-FDDF292FBF60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480A7C21-EF5E-45A8-A7A5-FDDF292FBF60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480A7C21-EF5E-45A8-A7A5-FDDF292FBF60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E31EB42D-737E-451E-8E32-327EF6F885F2}
 	EndGlobalSection
 EndGlobal
