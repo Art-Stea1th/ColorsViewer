@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:ColorsViewer.ViewModels">
+
+    <DataTemplate DataType="{x:Type vm:PresetViewModel}">
+
+        <ListBox
+            ItemsSource="{Binding Colors}"
+            Style="{DynamicResource ListBoxStyle}">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <Button
+                        Style="{DynamicResource ButtonStyle}"
+                        Command="{Binding Path=DataContext.ChangeActualView,
+                        RelativeSource={RelativeSource Mode=FindAncestor,
+                        AncestorType={x:Type Window}}}"
+                        CommandParameter="{Binding}"
+                        HorizontalContentAlignment="Stretch"
+                        Padding="0">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border
+                                Grid.Column="0"
+                                Background="{Binding Brush}"
+                                Margin="0.5,1"/>
+
+                            <TextBlock
+                                Grid.Column="1"
+                                Text="{Binding Name}"
+                                Margin="16"/>
+                        </Grid>
+                    </Button>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DataTemplate>
+</ResourceDictionary>

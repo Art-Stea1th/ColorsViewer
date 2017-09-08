@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:h="clr-namespace:ColorsViewer.Helpers"
+                    xmlns:vm="clr-namespace:ColorsViewer.ViewModels">
+
+    <DataTemplate DataType="{x:Type vm:ColorDetailsViewModel}">
+
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border
+                Grid.Row="0"
+                MinHeight="255"
+                BorderBrush="{DynamicResource
+                {x:Static SystemColors.ControlBrushKey}}"
+                BorderThickness="1"
+                SnapsToDevicePixels="True"
+                Background="{Binding Brush}"/>
+
+            <ListBox
+                Grid.Row="1"
+                Style="{DynamicResource ListBoxStyle}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Button
+                            Style="{DynamicResource ButtonStyle}"
+                            HorizontalContentAlignment="Stretch"
+                            Command="{Binding Path=DataContext.CopyToClipboard,
+                            RelativeSource={RelativeSource Mode=FindAncestor,
+                            AncestorType={x:Type Window}}}"
+                            CommandParameter="{Binding Value}"
+                            ToolTipService.HasDropShadow="False"
+                            ToolTipService.InitialShowDelay="0"
+                            ToolTipService.BetweenShowDelay="1000"
+                            ToolTipService.ShowDuration="3200"
+                            ToolTipService.Placement="RelativePoint"
+                            ToolTipService.PlacementTarget="{Binding RelativeSource={RelativeSource Self}}">
+                            
+                            <Button.ToolTip>
+                                <ToolTip
+                                    Content="{Binding Value}"
+                                    ContentStringFormat="Click to copy > {0} > to clipboard"
+                                    SnapsToDevicePixels="True"
+                                    Padding="11"/>
+                            </Button.ToolTip>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock
+                                    Grid.Column="0"
+                                    Style="{DynamicResource TextBlockStyle}"
+                                    Text="{Binding Key}"/>                                
+                                <TextBlock
+                                    Grid.Column="1"
+                                    Style="{DynamicResource TextBlockStyle}"
+                                    Text="{Binding Value}"
+                                    HorizontalAlignment="Right"/>
+                            </Grid>
+                        </Button>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+                <h:KeyValue Key="Color Name" Value="{Binding Name}"/>
+                <h:KeyValue Key="HEX Value" Value="{Binding Brush.Color}"/>
+                <h:KeyValue Key="R" Value="{Binding Brush.Color.R}"/>
+                <h:KeyValue Key="G" Value="{Binding Brush.Color.G}"/>
+                <h:KeyValue Key="B" Value="{Binding Brush.Color.B}"/>
+                <h:KeyValue Key="A" Value="{Binding Brush.Color.A}"/>
+                
+            </ListBox>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

@@ -4,9 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace ColorsViewer.Helpers {
 
-    using Interfaces;
-
-    public abstract class Observable : IViewModel, INotifyPropertyChanged, IDisposable {
+    public abstract class Observable : INotifyPropertyChanged, IDisposable {
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -1,7 +1,6 @@
 * text=auto
 
 *.cs     diff=csharp
-*.bin    binary
 
 #*.sln       merge=binary
 #*.csproj    merge=binary
